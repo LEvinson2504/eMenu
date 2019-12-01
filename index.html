@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="utf-8">
+  <title>Activity Log</title>
+  <script>
+    // Wait until the window finishes loaded before executing any script
+    window.onload = function() {
+
+      // Initialize the activityNumber
+      var itemNumber = 1;
+
+      // Select the add_activity button
+      var addButton = document.getElementById("add_item");
+
+      // Select the table element
+      var menuTable = document.getElementById("menu");
+
+      // Attach handler to the button click event
+      addButton.onclick = function() {
+
+        // Add a new row to the table using the correct activityNumber
+        menuTable.innerHTML += '<tr><td>' + itemNumber + '</td><td><label>Menu Item : </label><br/><input type="text" name="actlog' + itemNumber + '" class="required"></td><td><label>Price : </label><br/><input type="number" name="price' + itemNumber + '" class="required"></td></tr>';
+
+        // Increment the activityNumber
+        itemNumber += 1;
+      }
+
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="leftcol">
+        <form name='mainForm' id='mainForm' method="get" action="#">
+          <fieldset>
+            <legend>La vie</legend>
+            <table id="menu">
+              <tr>
+                <th colspan="3">Menu : </th>
+              </tr>
+              
+            </table>
+            <input type="submit" />
+          </fieldset>
+        </form>
+        <button id="add_item">Add Item</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
