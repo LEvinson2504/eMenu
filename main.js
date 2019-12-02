@@ -19,21 +19,14 @@ window.onload = function() {
         itemPrice[itemNumber] = document.getElementById("itemPrice").value;
         console.log(itemName)
       // Add a new row to the table using the correct activityNumber
-        menuTable.innerHTML += "<tr><td>" + itemNumber + ": " + "</td>" + "<td>" + itemName[itemNumber] + " | " + "</td>" + "<td>" + itemPrice[itemNumber] + " </td> <td><button id=delete>Delete</button></td></tr> <br>";
-        
-        //delete function
-        
+       menuTable.innerHTML += "<tr><td>" + itemNumber + ": " + "</td>" + "<td>" + itemName[itemNumber] + " | " + "</td>" + "<td>" + itemPrice[itemNumber] + " </td> <td><button id=delete>Delete</button></tr> <br>";
 
        //empty the inputs
-        document.getElementById("itemName").value = "";
-        document.getElementById("itemPrice").value = "";
-        
+       document.getElementById("itemName").value = "";
+       document.getElementById("itemPrice").value = "";
+
       // Increment the activityNumber
-       itemNumber += 1;
-    }
-    // let deleteButton = document.getElementById("delete");
-    // deleteButton.onclick = function(){
-    //     menuTable.innerHTML 
+      itemNumber += 1;
     }
 
   }
